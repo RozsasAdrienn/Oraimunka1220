@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    font-size: 10pt;
+   
+}
+
+
+body{
+   
+    background-image: url("kepek/black.png");
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    grid-area: h;
+    height:  300px;
+    background-image: url("kepek/game.jpg");
+    background-size: cover;
+}
+nav{
+    grid-area: n;
+    background-color: rgb(51, 51, 51);
+    /*height: 40px;*/
+}
+
+
+
+article{
+    grid-area: a;
+    padding: 10px;
+}
+
+footer{
+    grid-area: f;
+    background-color: rgb(255,165,0);
+    margin-top: 10px;
+    text-align: center;
+}
+
+main{
+    margin: 0px auto;
+    display: grid;
+    grid-template-areas: 
+    'h'
+    'n'
+    'a'
+    'f'
+    ;
+    width: 90%;
+    max-width: 900px;
+    background-color: rgb(211, 211, 211);
+}
+
+#plakat{
+    width: 30%;
+    height: auto;
+    float: right;
+    margin: 5px;
+}
+ol{
+    margin: 0px; 
+    padding: 10px 0px;
+}
+
+nav li{
+    list-style-type: none;
+    border-right: solid 2px;
+    display: inline;
+    padding: 10px;
+}
+
+
+nav li a:hover, nav li:hover{
+    background-color: orange;
+}
+nav a{
+    text-decoration: none; 
+}
+
+article p{
+    text-align: justify;
+    font-size: 10px;
+    color: black;
+}
+
+article h2{
+    font-size: 15px;
+    color: black;
+}
+
+article li{
+    list-style-type: square;
+    color: black;
+}
+
+ul{
+    margin: 0px;
+}
+
+
+@media only screen and (max-width: 700px){
+
+    main *{
+        display: block;
+    }
+    nav li{
+        display: block;
+    }
+
+    #plakat{
+        float: none;
+    }
+}
